@@ -1,0 +1,35 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ababab;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+nav {
+    display: flex;
+    padding: 20px;
+    background: #ccc;
+}
+
+.logo {
+    width: 100px;
+    height: 100%;
+}
+
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chart-area {
+    align-items: center;
+}
