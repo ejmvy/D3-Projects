@@ -1,0 +1,44 @@
+
+svg, select {
+    margin: 0 auto;
+    display: block;
+}
+
+path {
+    stroke: #ccc;
+    stroke-width: 0.25px;
+}
+
+.tooltip {
+    /* opacity: 0; */
+    position: absolute;
+    pointer-events:none;
+    background-color: #ccc;
+    border: 2px solid #888;
+    border-radius: 6px;
+    padding: 15px;
+}
+
+.d3-tip {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Arial, sans-serif;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFA500;
+    border-radius: 1px;
+    pointer-events: none;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+.d3-tip:after {      
+    box-sizing: border-box;
+    display: inline;
+    font-size: 8px;
+    width: 100%;
+    line-height: 1.5;
+    color: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    pointer-events: none;
+    
+}

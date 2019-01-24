@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Allerta Stencil', sans-serif;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.links line {
+  stroke: #999;
+  stroke-opacity: 0.6;
+}
+
+.tooltip {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  background-color:rgba(0,0,0,0.7);
+  border: 5px solid #999;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.tooltip p {
+  margin: 0 0 5px;
+  padding: 0;
+  text-align: center;
+}
+
+.tooltip ol {
+  margin: 0;
+  padding: 0 15px;
+}
+
+#checkboxes {
+  margin-top: 100px;
+  background:#4fc3f7;
+  border: 5px solid #48aaad;
+  font-family: 'Allerta Stencil', sans-serif;
+  line-height: 1.4;
+  border-radius: 6px;
+  padding: 15px;
+  display: inline-block;
+  vertical-align: top;
+}

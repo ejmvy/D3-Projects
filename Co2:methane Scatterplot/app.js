@@ -6,6 +6,8 @@ var height = 600;
 var padding = 100;
 
 var time = 0;
+var interval;
+var years;
 
 
 var svg = d3.select('svg')
@@ -13,7 +15,7 @@ var svg = d3.select('svg')
     .attr('height', height);
 
 var g = svg.append('g')
-    .attr('transform', 'translate(100,0)');
+    .attr('transform', 'translate(20,-30)');
 
 var xLabel = g.append('text')
     .attr('x', width /2)
@@ -25,7 +27,7 @@ var xLabel = g.append('text')
 
 var yLabel = g.append('text')
     .attr('x', - height / 2)
-    .attr('y', - 20)
+    .attr('y', 0)
     .attr('font-size', '20px')
     .attr('text-anchor', 'middle')
     .attr('transform', 'rotate(-90)')
@@ -74,8 +76,7 @@ d3.queue()
         
         
         // d3.interval(function() {
-        //     time = (time < 42) ? time+1 : 0
-        //     drawPlot(years[time])
+        //     
         // },500);
 
         // d3.select('input')
@@ -150,7 +151,13 @@ d3.queue()
                     .attr('fill', d => colorScale(d.gdp / d.population));
         
             timeLabel.text(+(time + 1970));
+
+            $('#year')[0].innerHTML = +(time + 1970)
+
+            // $('#date-slider').slider('value', +(time + 1970))
         };
+
+        
         
         function showTooltip(d) {
             
@@ -228,9 +235,44 @@ d3.queue()
             }
             return true;
         }
+
+        $('#playBtn')
+            .on('click', function() {
+                var button = $(this);
+                if(button.text() === 'Play') {
+                    button.text('Pause');
+                    interval = setInterval(step, 200);
+                } else {
+                    button.text('Play');
+                    clearInterval(interval);
+                }
+            })
+    
+        $('#resetBtn')
+            .on('click', function() {
+                time = 0;
+                drawPlot(years[0]);
+            })
+
+        $('#date-slider').slider({
+            max: 2012,
+            min: 1970,
+            step: 1,
+            slide: function(event, ui) {
+                time = ui.value - 1970;
+                drawPlot(years[time]);
+            }
+        })
+
+        function step() {
+            time = (time < 42) ? time+1 : 0
+            drawPlot(years[time]);
+        }
         
     });
     
+
+
 
 
 //     var yearValues = d3.nest()

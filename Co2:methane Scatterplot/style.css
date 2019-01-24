@@ -10,14 +10,27 @@ body {
 
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+ 
 }
 
-/* svg {
-    width: 600px;
-    height: 600px;
-} */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+    padding: 40px 150px;
+    padding-bottom: 0;
+}
+
+.graph {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* display: flex; */
+}
 
 header {
     background-image: linear-gradient(to top,#008081,#00a695);
@@ -52,3 +65,36 @@ header {
 }
 
 
+button {
+    padding: 8px 20px;
+    color: white;
+    background: #008081;
+    text-transform: uppercase;
+    border-radius: 6px;
+}
+
+button:hover {
+    background: #00a695;
+}
+
+#slider-div {
+    display: flex;
+    align-items: center;
+}
+
+#date-slider {
+    width: 300px;
+    margin-left: 25px;
+}
+
+.title {
+    font-size: 20px;
+    color: #20392c;
+    font-family: 'Spicy Rice', cursive;
+}
+
+#year {
+    color: white;
+    font-size: 30px;
+    font-family: 'Spicy Rice', cursive;
+}
