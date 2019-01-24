@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Alcohol Consumption Visualisation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/d3-tip.css">
+    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="mainSect">
+
+        <header>
+            <h1>Global Alcohol Consumption Levels 2010</h1>
+        </header>
+
+        <div class="graphs">
+            <div class="col" id="main">
+                <div class="var-select">
+                    <p>Choose which alcohol you'd like to explore</p>
+                    <input type="radio" name="data-type" value="wine" checked>
+                    <label>Wine</label>
+                    <input type="radio" name="data-type" value="beer">
+                    <label>Beer</label>
+                    <input type="radio" name="data-type" value="spirit">
+                    <label>Spirits</label>
+                </div>
+                <!-- <div class="var-select">
+                    <select>
+                        <option value='wine'>Wine</option>
+                        <option value='beer'>Beer</option>
+                        <option value='spirits'>Spirits</option>
+                    </select>
+                </div> -->
+                <div id="world-map"></div> 
+                
+            </div>
+
+            <div class="col" id="right">
+                <div class="smallCol">
+                    <p>Global consumption of <span id="drink">Wine</span> :</p>
+                    <div id="continent-total"></div>
+                </div>
+                <div class="smallCol">
+                    <p>Consumption of alcohol in <span id="location">Ireland</span></p> 
+                    <div id="country-total"></div>
+                </div>
+            
+            </div>    
+        </div>
+    </div>
+    
+    
+    
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script> -->
+    <!-- <script src="node_modules/datamaps/dist/datamaps.world.min.js"></script> -->
+    <script src="js/d3-tip.js"></script>
+    <script src="js/barChart.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/pie.js"></script>
+    
+    <!-- <script src="app.js"></script> -->
+    <script src="main.js"></script>
+    
+</body>
+
+
+</html>

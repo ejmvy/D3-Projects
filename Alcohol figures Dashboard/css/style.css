@@ -1,0 +1,78 @@
+body {
+    background: navy;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Allerta Stencil', sans-serif;
+}
+
+
+.mainSect {
+    width: 90%;
+    height: 90%;
+    padding: 15px;
+    background: #ebebeb;
+    box-shadow: 0 0 4px rgba(0,0,0,0.8);
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+    color: navy;
+
+
+}
+
+.graphs {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 350px;
+    /* border: 1px solid red; */
+}
+
+/* #right {
+
+
+} */
+
+#main {
+    flex: 3;
+}
+
+.var-select {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.smallCol {
+    flex: 1;
+    /* border: 1px solid blue; */
+    height: 100%;
+}
+
+
+#world-map {
+    width: 100%;
+}
+
+#world-map svg {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+}
+
+#main_map {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    box-sizing: border-box;
+}
